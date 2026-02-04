@@ -1,0 +1,43 @@
+/* Example Bootstrap E-commerce Template Theme */
+/* Reset and overriding Bootstrap to match shop design */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fc;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #563d7c;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-banner {
+    background: linear-gradient(to bottom, #6a5acd, #836fff);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
