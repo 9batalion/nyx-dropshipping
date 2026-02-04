@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nyx-dropshipping-shop
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: free
+    envVars:
+      - key: SHOPIFY_STORE_URL
+        fromFile: .env
+      - key: SHOPIFY_ACCESS_TOKEN
+        fromFile: .env
+      - key: SHOPIFY_API_VERSION
+        fromFile: .env
+      - key: CJ_API_KEY
+        fromFile: .env

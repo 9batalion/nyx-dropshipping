@@ -1,0 +1,76 @@
+<h2>Twój koszyk</h2>
+
+<div id="cart-container">
+    <div class="alert alert-info" id="empty-cart-message">
+        Twój koszyk jest pusty. <a href="/">Przejdź do zakupów</a>
+    </div>
+    
+    <div id="cart-items" style="display: none;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                    <th>Razem</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body">
+                <!-- Produkty będą dodawane tutaj dynamicznie -->
+            </tbody>
+        </table>
+        
+        <div class="row">
+            <div class="col-md-6 offset-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Podsumowanie</h4>
+                        <table class="table">
+                            <tr>
+                                <td>Suma:</td>
+                                <td id="subtotal">0.00 zł</td>
+                            </tr>
+                            <tr>
+                                <td>Dostawa:</td>
+                                <td id="shipping-cost">Darmowa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Do zapłaty:</strong></td>
+                                <td><strong id="total">0.00 zł</strong></td>
+                            </tr>
+                        </table>
+                        
+                        <button class="btn btn-success w-100" id="checkout-button">Przejdź do płatności</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Prosta symulacja koszyka (w rzeczywistej aplikacji użyłbyś bazy danych lub localStorage)
+    const cartItems = [];
+    
+    function updateCartDisplay() {
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const cartItemsContainer = document.getElementById('cart-items');
+        
+        if (cartItems.length === 0) {
+            emptyCartMessage.style.display = 'block';
+            cartItemsContainer.style.display = 'none';
+        } else {
+            emptyCartMessage.style.display = 'none';
+            cartItemsContainer.style.display = 'block';
+            
+            // W tej wersji demonstracyjnej nie implementujemy pełnego koszyka
+            // W rzeczywistej aplikacji tu byłaby logika wyświetlania produktów w koszyku
+        }
+    }
+    
+    // Inicjalizacja
+    updateCartDisplay();
+});
+</script>
