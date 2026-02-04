@@ -65,6 +65,26 @@ body {
     color: #4361ee !important;
 }
 
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(to right, #4cc9f0, #4361ee);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.hero-section h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero-section .btn-light {
+    color: #4361ee;
+    border: 2px solid white;
+    transition: all 0.3s;
+}
+.hero-section .btn-light:hover {
+    background: white;
+    color: #4361ee;
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
     .navbar-nav {

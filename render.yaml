@@ -5,6 +5,8 @@ services:
     buildCommand: "npm install"
     startCommand: "npm start"
     plan: free
+    templates:
+      engine: ejs
     envVars:
       - key: SHOPIFY_STORE_URL
         fromFile: .env
